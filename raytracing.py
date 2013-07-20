@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-a = 4
-w = 200*a
-h = 150*a
+w = 400
+h = 300
 
 def normalize(x):
     x /= np.linalg.norm(x)
@@ -135,7 +134,7 @@ S = (-1., -1. / r + .25, 1., 1. / r + .25)
 # Loop through all pixels.
 for i, x in enumerate(np.linspace(S[0], S[2], w)):
     if i % 10 == 0:
-        print i, w
+        print i / float(w) * 100, "%"
     for j, y in enumerate(np.linspace(S[1], S[3], h)):
         col[:] = 0
         Q[:2] = (x, y)
